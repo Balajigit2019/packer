@@ -1,16 +1,16 @@
 {
 "variables": {
-"instance_size": "t2.small",
-"ami_name": "ami-jenkins",
-"base_ami": "ami-0cfedf42e63bba657",
-"ssh_username": "ubuntu",
+"instance_size": "t2.small",                   #change has per your request
+"ami_name": "ami-jenkins",                     #change has per your request
+"base_ami": "ami-0cfedf42e63bba657",           #change has per your request
+"ssh_username": "ubuntu",                      #Change has per your request, here i have used ubuntu image, so user name ubutu
 "vpc_id": "",
 "subnet_id": ""
 },
 "builders": [
 {
 "type": "amazon-ebs",
-"region": "ap-south-1",
+"region": "ap-south-1",                        #change has per your request
 "source_ami": "{{user `base_ami`}}",
 "instance_type": "{{user `instance_size`}}",
 "ssh_username": "{{user `ssh_username`}}",
@@ -20,8 +20,8 @@
 "vpc_id": "{{user `vpc_id`}}",
 "subnet_id": "{{user `subnet_id`}}",
 "tags": {
-"Name": "Jenkins_ami",
-"BuiltBy": "Packer"
+"Name": "Jenkins_ami",                        #change has per your request
+"BuiltBy": "Packer"                           #change has per your request
 }
 }
 ],
